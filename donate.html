@@ -17,6 +17,9 @@
   </head>
 
   <body class="bg-dark">
+    <div id="title-bar">
+      <h2 id="title-words">EHS Robotics Team</h2>
+    </div>
     <ul
       class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm"
       id="pillNav2"
@@ -82,5 +85,50 @@
         >
       </li>
     </ul>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card bg-secondary text-white">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Support EHS Robotics</h3>
+              <p class="card-text text-center mb-4">
+                Your donation helps us build amazing robots and compete at the
+                highest levels.
+              </p>
+              <div id="paypal-button-container" class="mb-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+    <script>
+      paypal
+        .Buttons({
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: "10.00",
+                  },
+                },
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (orderData) {
+              console.log("Order captured:", orderData);
+              alert("Thank you for your donation!");
+            });
+          },
+          onError: function (err) {
+            console.error("Error:", err);
+            alert("An error occurred during the transaction.");
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
   </body>
 </html>

@@ -7,3 +7,29 @@
     color:rgb(255, 255, 255);
     background-color:rgb(100, 100, 100);
 }
+
+#title-words {
+    color: rgb(255, 255, 255);
+}
+
+#title-bar {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 0%;
+    /* background-color: rgb(125, 125, 125); */
+    width: 100%;
+}
+
+p {
+    color: #FAFAFA;
+}
+
+.alert 
+{
+    background-color: #FF9955;
+}
+
+.alert-heading
+{
+    color: #FAFAFA;
+}
