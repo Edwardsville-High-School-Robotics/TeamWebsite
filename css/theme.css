@@ -1,35 +1,125 @@
-.nav
-{
-    color: #565656
+html, body {
+    height: 100%;
+    background-color: #0b1220;
+    overscroll-behavior-y: contain;
 }
 
-.nav-item > a:hover{
-    color:rgb(255, 255, 255);
-    background-color:rgb(100, 100, 100);
+/* Fixed background layer so rubber-band/overscroll shows the gradient instead of white */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg,#0f1723 0%, #0b1220 60%);
+    pointer-events: none;
 }
 
-#title-words {
-    color: rgb(255, 255, 255);
+.site-bg {
+    min-height: 100vh;
+}
+body {
+    color: #e9eef6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #title-bar {
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 0%;
-    /* background-color: rgb(125, 125, 125); */
-    width: 100%;
+    padding: 1.25rem 0 0.25rem;
 }
 
-p {
-    color: #FAFAFA;
+#title-words {
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
-.alert 
-{
-    background-color: #FF9955;
+/* Nav tweaks */
+.nav-pills .nav-link {
+    background: transparent;
+    color: #f8f9fa;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
 }
 
-.alert-heading
-{
-    color: #FAFAFA;
+.nav-pills .nav-link.active {
+    background: #ff871e;
+    color: #1b1b1b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.nav-pills .nav-link:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+/* Nav buttons: become white on hover/focus for clearer interaction */
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+    background: #ffffff;
+    color: #ff871e;
+}
+
+/* Allow horizontal scrolling on small screens for nav */
+.nav-pills {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+}
+
+.nav-pills .nav-link { white-space: nowrap; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(90deg, rgba(255,154,42,0.06), rgba(255,154,42,0.03));
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.card.bg-secondary {
+    background: rgba(25,25,28,0.75) !important;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+.card .card-title {
+    letter-spacing: 0.25px;
+}
+
+.text-muted.small {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+a.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.btn-warning.custom {
+    background: #ff871e;
+    border-color: #ff871e;
+    color: #171717;
+    transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
+}
+
+/* Hover/focus: white background with brand color text */
+.btn-warning.custom:hover,
+.btn-warning.custom:focus,
+.btn-warning.custom:active {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #ff871e;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 768px) {
+    .hero { padding: 1.25rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .hero p { font-size: 0.95rem; }
+    .nav-pills .nav-link { padding: 0.45rem 0.75rem; }
+}
+
+@media (max-width: 576px) {
+    .hero { padding: 1rem; }
+    .hero h1 { font-size: 1.25rem; }
+    .hero p { font-size: 0.9rem; }
+    .container { padding-left: 0.75rem; padding-right: 0.75rem; }
 }
