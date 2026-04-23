@@ -81,6 +81,11 @@ body {
     box-shadow: 0 8px 24px rgba(2,6,23,0.6);
 }
 
+/* Sponsor grid */
+.sponsor-item img { max-height: 64px; max-width: 100%; object-fit: contain; }
+.sponsor-item .sponsor-placeholder { background: rgba(255,255,255,0.03); }
+.sponsor-item .sponsor-placeholder:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.5); }
+
 .card .card-title {
     letter-spacing: 0.25px;
 }
