@@ -9,82 +9,38 @@
     <title>Page Title</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
   </head>
 
   <body class="site-bg">
-    <div id="title-bar">
-      <h2 id="title-words">EHS Robotics Team</h2>
-    </div>
-    <ul
-      class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm"
-      id="pillNav2"
-      role="tablist"
-      style="
-        --bs-nav-link-color: var(--bs-white);
-        --bs-nav-pills-link-active-color: var(--bs-white);
-        --bs-nav-pills-link-active-bg: var(--bs-orange);
-      "
-    >
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link rounded-5"
-          data-bs-toggle="tab"
-          href="index.html"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          >Home</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link rounded-5"
-          data-bs-toggle="tab"
-          href="sponsors.html"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          >Sponsors</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link rounded-5"
-          data-bs-toggle="tab"
-          href="donate.html"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          >Donate</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link rounded-5"
-          data-bs-toggle="tab"
-          href="awards.html"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          >Awards</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link active rounded-5"
-          data-bs-toggle="tab"
-          type="button"
-          role="tab"
-          aria-selected="true"
-          >About</a
-        >
-      </li>
-    </ul>
+    <header id="title-bar" class="text-center">
+      <div class="container">
+        <h1>EHS Robotics Team</h1>
+        <p class="text-light small mb-0">
+          Building skills, robots, and community partnerships
+        </p>
+      </div>
+    </header>
+    <nav class="container my-3">
+      <ul
+        class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm"
+      >
+        <li class="nav-item">
+          <a class="nav-link rounded-5" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-5" href="sponsors.html">Sponsors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-5" href="donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-5" href="awards.html">Awards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-5 active" aria-current="page">About</a>
+        </li>
+      </ul>
+    </nav>
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-8 mx-auto">
